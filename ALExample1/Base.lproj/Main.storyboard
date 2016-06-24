@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ALExample1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ejk-a2-kQz"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQw-QS-dkD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="mOZ-ma-C2g">
-                                <rect key="frame" x="20" y="20" width="115" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOZ-ma-C2g" userLabel="View1">
+                                <rect key="frame" x="20" y="20" width="260" height="244"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.43137254899999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="Z60-cm-tFS"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" id="uS3-zG-rKA">
-                                <rect key="frame" x="170" y="20" width="130" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.23921568630000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="3ip-IO-WUH">
-                                <rect key="frame" x="20" y="282" width="275" height="266"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ip-IO-WUH" userLabel="View3">
+                                <rect key="frame" x="20" y="282" width="560" height="298"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uS3-zG-rKA" userLabel="View2">
+                                <rect key="frame" x="320" y="20" width="260" height="244"/>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.23921568630000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ip-IO-WUH" firstAttribute="top" secondItem="uS3-zG-rKA" secondAttribute="bottom" constant="18" id="5bm-Lu-FYn"/>
+                            <constraint firstItem="mOZ-ma-C2g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CKz-HD-TV4"/>
+                            <constraint firstItem="3ip-IO-WUH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UWQ-tW-geR"/>
+                            <constraint firstItem="uS3-zG-rKA" firstAttribute="height" secondItem="mOZ-ma-C2g" secondAttribute="height" id="WZp-68-fOg"/>
+                            <constraint firstItem="uS3-zG-rKA" firstAttribute="leading" secondItem="mOZ-ma-C2g" secondAttribute="trailing" constant="40" id="Zn9-Yj-udZ"/>
+                            <constraint firstItem="uS3-zG-rKA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="f74-pB-jFF"/>
+                            <constraint firstItem="uS3-zG-rKA" firstAttribute="width" secondItem="mOZ-ma-C2g" secondAttribute="width" id="iPH-qf-fhS"/>
+                            <constraint firstItem="3ip-IO-WUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kAW-hr-Ze2"/>
+                            <constraint firstItem="gQw-QS-dkD" firstAttribute="top" secondItem="3ip-IO-WUH" secondAttribute="bottom" constant="20" id="pRJ-vR-hEh"/>
+                            <constraint firstItem="mOZ-ma-C2g" firstAttribute="top" secondItem="ejk-a2-kQz" secondAttribute="bottom" id="tuy-BB-fv4"/>
+                            <constraint firstItem="uS3-zG-rKA" firstAttribute="top" secondItem="mOZ-ma-C2g" secondAttribute="top" id="zvP-ba-xP9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="355"/>
+            <point key="canvasLocation" x="84" y="375"/>
         </scene>
     </scenes>
 </document>
